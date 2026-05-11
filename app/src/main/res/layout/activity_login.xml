@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/solar_black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <!-- Logo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="☀️"
+            android:textSize="80sp"
+            android:paddingTop="40dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Surya-Shakti"
+            android:textColor="@color/solar_yellow"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome back! Please login"
+            android:textColor="@color/solar_grey"
+            android:textSize="14sp"
+            android:paddingTop="4dp"
+            android:paddingBottom="40dp" />
+
+        <!-- Login Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/solar_card_bg"
+            app:cardCornerRadius="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👤 Login"
+                    android:textColor="@color/solar_yellow"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="16dp" />
+
+                <!-- Email Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Your Name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeColor="@color/solar_yellow"
+                    app:hintTextColor="@color/solar_yellow"
+                    android:layout_marginBottom="16dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_login_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/solar_white"
+                        android:inputType="textPersonName" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Password Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password (min 6 characters)"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeColor="@color/solar_yellow"
+                    app:hintTextColor="@color/solar_yellow"
+                    app:endIconMode="password_toggle"
+                    android:layout_marginBottom="20dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_login_pin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/solar_white"
+                        android:inputType="textPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Login Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="🔓 LOGIN"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/solar_black"
+                    app:backgroundTint="@color/solar_yellow"
+                    app:cornerRadius="12dp"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Forgot Password -->
+                <TextView
+                    android:id="@+id/tv_forgot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Forgot Password?"
+                    android:textColor="@color/solar_grey"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:paddingBottom="8dp" />
+
+                <!-- Register Link -->
+                <TextView
+                    android:id="@+id/tv_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="New user? Create Account"
+                    android:textColor="@color/solar_yellow"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:paddingTop="4dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

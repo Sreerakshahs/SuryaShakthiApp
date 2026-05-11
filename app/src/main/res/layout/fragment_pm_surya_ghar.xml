@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/solar_black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🌞 PM Surya Ghar Yojana"
+            android:textColor="@color/solar_yellow"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Free electricity for 1 crore households!"
+            android:textColor="@color/solar_grey"
+            android:textSize="13sp"
+            android:paddingBottom="20dp" />
+
+        <!-- About Scheme -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/solar_yellow"
+            app:cardCornerRadius="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📋 About the Scheme"
+                    android:textColor="@color/solar_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PM Surya Ghar: Muft Bijli Yojana was launched by the Government of India in February 2024. It aims to provide free electricity up to 300 units per month to 1 crore households through rooftop solar panels."
+                    android:textColor="@color/solar_black"
+                    android:textSize="13sp"
+                    android:lineSpacingExtra="4dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Benefits -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/solar_card_bg"
+            app:cardCornerRadius="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💰 Key Benefits"
+                    android:textColor="@color/solar_yellow"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="12dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="✅  Up to 300 units FREE electricity per month"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp"
+                    android:paddingBottom="8dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="✅  Central subsidy up to ₹78,000"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp"
+                    android:paddingBottom="8dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="✅  Additional state government subsidies"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp"
+                    android:paddingBottom="8dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="✅  Earn by selling extra power to grid"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp"
+                    android:paddingBottom="8dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="✅  25 years of solar panel lifespan"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Subsidy Table -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/solar_card_bg"
+            app:cardCornerRadius="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🏦 Subsidy Structure"
+                    android:textColor="@color/solar_yellow"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="12dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 kW System → ₹30,000 subsidy"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp"
+                    android:paddingBottom="8dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 kW System → ₹60,000 subsidy"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp"
+                    android:paddingBottom="8dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3 kW System → ₹78,000 subsidy"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp"
+                    android:paddingBottom="8dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Above 3 kW → ₹78,000 subsidy (max)"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Eligibility -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/solar_card_bg"
+            app:cardCornerRadius="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✔️ Eligibility Criteria"
+                    android:textColor="@color/solar_yellow"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="12dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Must be an Indian citizen"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp"
+                    android:paddingBottom="6dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Must own a house with valid electricity connection"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp"
+                    android:paddingBottom="6dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Must have a valid bank account with IFSC"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp"
+                    android:paddingBottom="6dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Should not have previously availed solar subsidy"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- How to Apply -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/solar_card_bg"
+            app:cardCornerRadius="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📝 How to Apply"
+                    android:textColor="@color/solar_yellow"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="12dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Step 1: Visit pmsuryaghar.gov.in"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp"
+                    android:paddingBottom="6dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Step 2: Register with your electricity bill number"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp"
+                    android:paddingBottom="6dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Step 3: Apply for rooftop solar"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp"
+                    android:paddingBottom="6dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Step 4: Get feasibility approval from DISCOM"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp"
+                    android:paddingBottom="6dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Step 5: Install panels via registered vendor"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp"
+                    android:paddingBottom="6dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Step 6: Submit installation details + bank info"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp"
+                    android:paddingBottom="6dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Step 7: Receive subsidy in 30 days! ✅"
+                    android:textColor="@color/solar_green"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Website Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_visit_website"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="🌐 Visit pmsuryaghar.gov.in"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/solar_black"
+            app:backgroundTint="@color/solar_yellow"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>

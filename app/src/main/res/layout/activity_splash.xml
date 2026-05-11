@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/solar_black">
+
+    <!-- Lottie Sun Animation -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_view"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/sun_animation" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Surya-Shakti"
+        android:textColor="@color/solar_yellow"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:paddingTop="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Solar Energy Monitor"
+        android:textColor="@color/solar_grey"
+        android:textSize="16sp"
+        android:paddingTop="8dp" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/solar_yellow" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Powering your solar journey..."
+        android:textColor="@color/solar_grey"
+        android:textSize="12sp"
+        android:paddingTop="16dp" />
+
+</LinearLayout>

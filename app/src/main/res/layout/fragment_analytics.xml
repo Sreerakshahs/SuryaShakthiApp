@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/solar_black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📊 Advanced Analytics"
+            android:textColor="@color/solar_yellow"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deep insights into your solar performance"
+            android:textColor="@color/solar_grey"
+            android:textSize="13sp"
+            android:paddingBottom="20dp" />
+
+        <!-- CO2 Saved Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="#0A2A0A"
+            app:cardCornerRadius="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌍 CO2 Emissions Saved"
+                    android:textColor="@color/solar_green"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp" />
+                <TextView
+                    android:id="@+id/tv_co2_saved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00 kg"
+                    android:textColor="@color/solar_white"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="of CO2 prevented from atmosphere"
+                    android:textColor="@color/solar_grey"
+                    android:textSize="12sp"
+                    android:paddingTop="4dp" />
+                <TextView
+                    android:id="@+id/tv_trees_equivalent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌳 Equivalent to 0 trees planted"
+                    android:textColor="@color/solar_green"
+                    android:textSize="13sp"
+                    android:paddingTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ROI Calculator Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/solar_card_bg"
+            app:cardCornerRadius="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💰 Solar ROI Calculator"
+                    android:textColor="@color/solar_yellow"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="12dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Installation Cost (₹)"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeColor="@color/solar_yellow"
+                    app:hintTextColor="@color/solar_yellow"
+                    android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_installation_cost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:text="150000"
+                        android:textColor="@color/solar_white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Monthly Savings (₹)"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeColor="@color/solar_green"
+                    app:hintTextColor="@color/solar_green"
+                    android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_monthly_savings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:text="1200"
+                        android:textColor="@color/solar_white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_calculate_roi"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="📊 Calculate ROI"
+                    android:textColor="@color/solar_black"
+                    app:backgroundTint="@color/solar_yellow"
+                    app:cornerRadius="8dp"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- ROI Results -->
+                <LinearLayout
+                    android:id="@+id/layout_roi_results"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_payback_period"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="⏱️ Payback Period: -- years"
+                        android:textColor="@color/solar_white"
+                        android:textSize="14sp"
+                        android:paddingBottom="6dp" />
+
+                    <TextView
+                        android:id="@+id/tv_10yr_savings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="💰 10-Year Savings: ₹--"
+                        android:textColor="@color/solar_green"
+                        android:textSize="14sp"
+                        android:paddingBottom="6dp" />
+
+                    <TextView
+                        android:id="@+id/tv_25yr_savings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🏆 25-Year Savings: ₹--"
+                        android:textColor="@color/solar_yellow"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Energy Efficiency Rating -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/solar_card_bg"
+            app:cardCornerRadius="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⭐ Energy Efficiency Rating"
+                    android:textColor="@color/solar_yellow"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="12dp" />
+                <TextView
+                    android:id="@+id/tv_efficiency_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A+"
+                    android:textColor="@color/solar_green"
+                    android:textSize="64sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_efficiency_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Excellent solar utilization!"
+                    android:textColor="@color/solar_white"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:paddingTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Monthly Comparison -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/solar_card_bg"
+            app:cardCornerRadius="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📈 Generation vs Consumption"
+                    android:textColor="@color/solar_yellow"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="12dp" />
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/bar_chart_comparison"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- AI Chatbot Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="#1A0A2E"
+            app:cardCornerRadius="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🤖 AI Energy Assistant"
+                    android:textColor="@color/solar_yellow"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp" />
+
+                <!-- Chat Messages -->
+                <LinearLayout
+                    android:id="@+id/chat_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="8dp">
+
+                    <!-- AI Message -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🤖 Hi! I'm your solar AI assistant. Ask me anything about your energy usage!"
+                        android:textColor="@color/solar_white"
+                        android:textSize="13sp"
+                        android:background="#2A1A4E"
+                        android:padding="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:maxWidth="280dp" />
+
+                </LinearLayout>
+
+                <!-- Chat Input -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_chat_input"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Ask AI assistant..."
+                        android:textColor="@color/solar_white"
+                        android:textColorHint="@color/solar_grey"
+                        android:background="#2A1A4E"
+                        android:padding="10dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_send_chat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Send"
+                        android:textColor="@color/solar_black"
+                        app:backgroundTint="@color/solar_yellow"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

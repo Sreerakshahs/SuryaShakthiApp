@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "853846365361",
+    "project_id": "suryashakti-95755",
+    "storage_bucket": "suryashakti-95755.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853846365361:android:dab1bdd986f857f3e57e90",
+        "android_client_info": {
+          "package_name": "com.suryashaktiapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGJhD8erkroW--0Bi1xOh4PS5uNwuikdE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

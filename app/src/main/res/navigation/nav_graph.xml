@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.suryashaktiapp.ui.DashboardFragment"
+        android:label="Dashboard" />
+
+    <fragment
+        android:id="@+id/logEntryFragment"
+        android:name="com.suryashaktiapp.ui.LogEntryFragment"
+        android:label="Log Energy" />
+
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.suryashaktiapp.ui.ReportFragment"
+        android:label="Report" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.suryashaktiapp.ui.SettingsFragment"
+        android:label="Settings" />
+    <fragment
+        android:id="@+id/tipsFragment"
+        android:name="com.suryashaktiapp.ui.TipsFragment"
+        android:label="Tips" />
+    <fragment
+        android:id="@+id/achievementsFragment"
+        android:name="com.suryashaktiapp.ui.AchievementsFragment"
+        android:label="Achievements" />
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.suryashaktiapp.ui.WeatherFragment"
+        android:label="Weather" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.suryashaktiapp.ui.AboutFragment"
+        android:label="About" />
+    <fragment
+        android:id="@+id/pmSuryaGharFragment"
+        android:name="com.suryashaktiapp.ui.PmSuryaGharFragment"
+        android:label="PM Surya Ghar" />
+    <fragment
+        android:id="@+id/analyticsFragment"
+        android:name="com.suryashaktiapp.ui.AnalyticsFragment"
+        android:label="Analytics" />
+
+</navigation>
