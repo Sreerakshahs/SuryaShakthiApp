@@ -22,8 +22,8 @@
         android:title="Report" />
 
     <item
-        android:id="@+id/pmSuryaGharFragment"
+        android:id="@+id/profileFragment"
         android:icon="@android:drawable/ic_menu_myplaces"
-        android:title="Govt" />
+        android:title="Profile" />
 
 </menu>

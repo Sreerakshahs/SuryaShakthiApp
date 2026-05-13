@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/solar_black">
+    android:background="@color/bg_main">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="☀️ Surya-Shakti"
-            android:textColor="@color/solar_yellow"
+            android:textColor="@color/solar_yellow_dark"
             android:textSize="26sp"
             android:textStyle="bold"
             android:gravity="center"
@@ -37,8 +37,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
-            app:cardBackgroundColor="@color/solar_card_bg"
-            app:cardCornerRadius="16dp">
+            app:cardBackgroundColor="@color/solar_white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -51,8 +52,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Green Independence Score"
-                    android:textColor="@color/solar_yellow"
+                    android:textColor="@color/solar_yellow_dark"
                     android:textSize="14sp"
+                    android:textStyle="bold"
                     android:paddingBottom="8dp" />
 
                 <com.github.mikephil.charting.charts.PieChart
@@ -83,8 +85,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginEnd="6dp"
-                app:cardBackgroundColor="@color/solar_card_bg"
-                app:cardCornerRadius="12dp">
+                app:cardBackgroundColor="@color/solar_white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -95,14 +98,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="⚡ Generated"
-                        android:textColor="@color/solar_yellow"
+                        android:textColor="@color/solar_yellow_dark"
                         android:textSize="12sp" />
                     <TextView
                         android:id="@+id/tv_generated"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0.0 kWh"
-                        android:textColor="@color/solar_white"
+                        android:textColor="@color/solar_black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -113,8 +116,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="6dp"
-                app:cardBackgroundColor="@color/solar_card_bg"
-                app:cardCornerRadius="12dp">
+                app:cardBackgroundColor="@color/solar_white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -132,7 +136,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0.0 kWh"
-                        android:textColor="@color/solar_white"
+                        android:textColor="@color/solar_black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -151,8 +155,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginEnd="6dp"
-                app:cardBackgroundColor="@color/solar_card_bg"
-                app:cardCornerRadius="12dp">
+                app:cardBackgroundColor="@color/solar_white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -170,7 +175,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="₹0.00"
-                        android:textColor="@color/solar_white"
+                        android:textColor="@color/solar_black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -181,8 +186,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="6dp"
-                app:cardBackgroundColor="@color/solar_card_bg"
-                app:cardCornerRadius="12dp">
+                app:cardBackgroundColor="@color/solar_white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -193,14 +199,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="🔋 Battery"
-                        android:textColor="@color/solar_yellow"
+                        android:textColor="@color/solar_yellow_dark"
                         android:textSize="12sp" />
                     <TextView
                         android:id="@+id/tv_battery"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0%"
-                        android:textColor="@color/solar_white"
+                        android:textColor="@color/solar_black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -212,8 +218,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
-            app:cardBackgroundColor="#1A2900"
-            app:cardCornerRadius="12dp">
+            app:cardBackgroundColor="#FFF9C4"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -223,7 +230,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Smart Suggestion"
-                    android:textColor="@color/solar_yellow"
+                    android:textColor="@color/solar_yellow_dark"
                     android:textSize="13sp"
                     android:textStyle="bold" />
                 <TextView
@@ -231,7 +238,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Loading suggestion..."
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="14sp"
                     android:paddingTop="4dp" />
             </LinearLayout>
@@ -244,8 +251,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:visibility="gone"
-            app:cardBackgroundColor="#001A2C"
-            app:cardCornerRadius="12dp">
+            app:cardBackgroundColor="#E3F2FD"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -262,7 +270,7 @@
                     android:id="@+id/tv_export"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp"
                     android:paddingTop="4dp" />
             </LinearLayout>
@@ -272,8 +280,10 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             app:cardBackgroundColor="@color/solar_yellow"
-            app:cardCornerRadius="12dp">
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -294,51 +304,52 @@
                     android:textColor="@color/solar_black"
                     android:textSize="28sp"
                     android:textStyle="bold" />
-                <!-- Quick Access Row -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="12dp">
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btn_achievements"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginEnd="6dp"
-                        android:text="🏆 Achievements"
-                        android:textColor="@color/solar_black"
-                        android:textSize="12sp"
-                        app:backgroundTint="@color/solar_yellow"
-                        app:cornerRadius="12dp" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btn_about"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginStart="6dp"
-                        android:text="ℹ️ About"
-                        android:textColor="@color/solar_black"
-                        android:textSize="12sp"
-                        app:backgroundTint="@color/solar_yellow"
-                        app:cornerRadius="12dp" />
-                    <!-- PM Surya Ghar Button -->
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btn_pm_surya"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="🌞 PM Surya Ghar Yojana — Know More"
-                        android:textColor="@color/solar_black"
-                        android:textSize="13sp"
-                        app:backgroundTint="@color/solar_yellow"
-                        app:cornerRadius="12dp" />
-
-                </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+        <!-- Quick Access Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_achievements"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:text="🏆 Achievements"
+                android:textColor="@color/solar_black"
+                android:textSize="12sp"
+                app:backgroundTint="@color/solar_yellow"
+                app:cornerRadius="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_about"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:text="ℹ️ About"
+                android:textColor="@color/solar_black"
+                android:textSize="12sp"
+                app:backgroundTint="@color/solar_yellow"
+                app:cornerRadius="12dp" />
+        </LinearLayout>
+
+        <!-- PM Surya Ghar Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_pm_surya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="🌞 PM Surya Ghar Yojana — Know More"
+            android:textColor="@color/solar_black"
+            android:textSize="13sp"
+            app:backgroundTint="@color/solar_yellow"
+            app:cornerRadius="12dp" />
 
     </LinearLayout>
 </ScrollView>

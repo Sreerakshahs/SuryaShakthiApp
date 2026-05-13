@@ -39,6 +39,7 @@ class AnalyticsFragment : Fragment() {
         observeData()
         setupROICalculator()
         setupAIChat()
+        setupQuickChips()
     }
 
     private fun setupBarChart() {
@@ -57,24 +58,27 @@ class AnalyticsFragment : Fragment() {
 
     private fun observeData() {
         viewModel.allLogs.observe(viewLifecycleOwner) { logs ->
-            if (logs.isEmpty()) return@observe
+            if (logs.isEmpty()) {
+                binding.tvCo2Saved.text = "0.00 kg"
+                binding.tvTreesEquivalent.text = "🌳 Log energy data to see CO2 savings!"
+                binding.tvEfficiencyGrade.text = "--"
+                binding.tvEfficiencyDesc.text = "Log energy data to get your rating!"
+                return@observe
+            }
 
             // CO2 Savings
             val totalGenerated = logs.sumOf { it.generatedKwh.toDouble() }.toFloat()
             val co2Saved = totalGenerated * 0.82f
             val treesEquivalent = (co2Saved / 21).toInt()
-
             binding.tvCo2Saved.text = "%.2f kg".format(co2Saved)
             binding.tvTreesEquivalent.text =
                 "🌳 Equivalent to $treesEquivalent trees planted"
 
             // Efficiency Grade
             val avgScore = logs.map { it.independenceScore }.average().toFloat()
-
             val grade: String
             val desc: String
             val gradeColor: String
-
             when {
                 avgScore >= 85 -> {
                     grade = "A+"
@@ -102,7 +106,6 @@ class AnalyticsFragment : Fragment() {
                     gradeColor = "#FF1744"
                 }
             }
-
             binding.tvEfficiencyGrade.text = grade
             binding.tvEfficiencyGrade.setTextColor(Color.parseColor(gradeColor))
             binding.tvEfficiencyDesc.text = desc
@@ -162,50 +165,77 @@ class AnalyticsFragment : Fragment() {
         }
     }
 
+    private fun setupQuickChips() {
+        binding.chipSave.setOnClickListener {
+            processQuestion("save energy")
+        }
+        binding.chipBattery.setOnClickListener {
+            processQuestion("battery tips")
+        }
+        binding.chipCo2.setOnClickListener {
+            processQuestion("co2 savings")
+        }
+        binding.chipRoi.setOnClickListener {
+            processQuestion("roi")
+        }
+        binding.chipPanel.setOnClickListener {
+            processQuestion("panel care")
+        }
+    }
+
     private fun setupAIChat() {
+        binding.btnSendChat.setOnClickListener {
+            val question = binding.etChatInput.text.toString().trim()
+            if (question.isEmpty()) return@setOnClickListener
+            processQuestion(question)
+            binding.etChatInput.text?.clear()
+        }
+    }
+
+    private fun processQuestion(question: String) {
+        val q = question.lowercase()
+
+        // Show user message
+        addChatMessage(question, isUser = true)
+
         val responses = mapOf(
-            "save" to "💡 Run heavy appliances between 10AM-3PM during peak sun hours!",
-            "battery" to "🔋 Keep battery between 20-90% for longer life. Avoid full discharge!",
-            "score" to "⭐ Green Score = Solar Coverage (70%) + Battery Level (30%). Higher is better!",
-            "generation" to "⚡ A 2kW panel generates 8-14 kWh on sunny days, 1-3 kWh on cloudy days.",
-            "savings" to "💰 Savings = Solar kWh × Rate per unit. Check your report for details!",
-            "panel" to "🌞 Clean panels every 2 weeks! Dust reduces efficiency by up to 25%.",
-            "export" to "🔛 Over-generation means you are sending power to the grid. Great job!",
-            "weather" to "🌤️ Sunny days give max generation. Cloudy days reduce output by 60-70%.",
-            "tip" to "💡 Switch to LED bulbs — they use 80% less energy than regular bulbs!",
-            "hello" to "👋 Hello! Ask me about savings, battery, score, generation or tips!",
-            "hi" to "👋 Hi there! I am your solar AI assistant. How can I help you today?",
-            "co2" to "🌍 Every kWh of solar energy saves 0.82 kg of CO2 from the atmosphere!",
-            "roi" to "💰 Average solar ROI payback period in India is 5-7 years. Then it is free!",
-            "pm" to "🌞 PM Surya Ghar Yojana gives up to Rs.78,000 subsidy for 3kW solar systems!",
-            "subsidy" to "🏦 Get up to Rs.78,000 central subsidy under PM Surya Ghar Yojana scheme!",
-            "grid" to "🔛 When you export to grid, you earn credit at Rs.3.5 per kWh!",
-            "clean" to "🧹 Clean panels with soft cloth and water in early morning!",
-            "led" to "💡 Replacing 10 bulbs with LEDs saves 0.5 kWh per day!",
-            "fan" to "🌀 Ceiling fan uses 75W, AC uses 1500W. Use fan when possible!",
-            "charge" to "📱 Charge all devices between 9AM-4PM using direct solar power!"
+            "save" to "💡 Run heavy appliances between 10AM-3PM during peak sun hours to maximize free solar energy!",
+            "battery" to "🔋 Keep battery between 20-90% for longer life. Avoid full discharge and overcharging!",
+            "score" to "⭐ Green Score = Solar Coverage (70%) + Battery Level (30%). Aim for 75+ for A grade!",
+            "generation" to "⚡ A 2kW panel generates 8-14 kWh on sunny days and only 1-3 kWh on cloudy days.",
+            "savings" to "💰 Your savings = Solar kWh × Rate per unit (₹). Check your 30-day report for total savings!",
+            "panel" to "🌞 Clean panels every 2 weeks with soft cloth and water! Dust reduces efficiency by 25%.",
+            "export" to "🔛 Over-generation means you are sending surplus power to the grid. You earn credit for this!",
+            "weather" to "🌤️ Sunny days give maximum generation. Cloudy days reduce solar output by 60-70%.",
+            "tip" to "💡 Switch to LED bulbs — they use 80% less energy. Replacing 10 saves 0.5 kWh daily!",
+            "hello" to "👋 Hello! I can help with energy saving, battery, score, generation, panel care and more!",
+            "hi" to "👋 Hi there! I am your solar AI assistant. What would you like to know?",
+            "co2" to "🌍 Every kWh of solar energy saves 0.82 kg of CO2! You are helping the planet every day!",
+            "roi" to "💰 Average solar ROI payback period in India is 5-7 years. After that electricity is FREE!",
+            "pm" to "🌞 PM Surya Ghar Yojana gives up to ₹78,000 subsidy! Check the Govt tab for details.",
+            "subsidy" to "🏦 Get up to ₹78,000 central subsidy under PM Surya Ghar Yojana for 3kW system!",
+            "grid" to "🔛 When you export to grid you earn approximately ₹3.5 per kWh credit in most states!",
+            "clean" to "🧹 Clean your solar panels with soft cloth and water in early morning before they heat up!",
+            "led" to "💡 Replace all bulbs with LEDs! Replacing 10 bulbs saves 0.5 kWh per day — ₹4 daily!",
+            "fan" to "🌀 Ceiling fan uses 75W, AC uses 1500W. Use fan in moderate weather and save big!",
+            "charge" to "📱 Charge phones, tablets and laptops between 9AM-4PM using direct solar power!",
+            "peak" to "☀️ Peak sun hours are 10AM to 3PM. Run washing machine, pump and iron during this time!",
+            "inverter" to "⚡ Keep inverter ventilated and clean. Check battery water levels monthly for long life!",
+            "india" to "🇮🇳 India gets 300+ sunny days per year! Your 2kW system can save ₹19,200 annually!",
+            "night" to "🌙 At night, use stored battery power. Minimize usage to make battery last till morning!",
+            "cost" to "💰 A 2kW solar system costs ₹1-1.5 lakh in India. With subsidy it comes down to ₹40,000!"
         )
 
-        binding.btnSendChat.setOnClickListener {
-            val question = binding.etChatInput.text.toString()
-                .lowercase().trim()
+        val response = responses.entries
+            .firstOrNull { q.contains(it.key) }?.value
+            ?: "🤖 I can help with: energy saving, battery, score, generation, " +
+            "panel care, CO2, ROI, subsidies, weather and more! Try asking something specific."
 
-            if (question.isEmpty()) return@setOnClickListener
-
-            addChatMessage(question, isUser = true)
-            binding.etChatInput.text?.clear()
-
-            val response = responses.entries
-                .firstOrNull { question.contains(it.key) }?.value
-                ?: "🤖 I can help with: energy saving, battery, score, " +
-                "generation, panel care, export, weather, CO2, ROI and subsidies!"
-
-            binding.root.postDelayed({
-                if (_binding != null) {
-                    addChatMessage(response, isUser = false)
-                }
-            }, 500)
-        }
+        binding.root.postDelayed({
+            if (_binding != null) {
+                addChatMessage(response, isUser = false)
+            }
+        }, 600)
     }
 
     private fun addChatMessage(message: String, isUser: Boolean) {
@@ -226,14 +256,18 @@ class AnalyticsFragment : Fragment() {
         params.bottomMargin = 12
         if (isUser) {
             params.gravity = Gravity.END
-            params.marginStart = 80
+            params.marginStart = 60
         } else {
             params.gravity = Gravity.START
-            params.marginEnd = 80
+            params.marginEnd = 60
         }
         tv.layoutParams = params
-
         binding.chatContainer.addView(tv)
+
+        // Auto scroll to bottom
+        binding.scrollChat.post {
+            binding.scrollChat.fullScroll(View.FOCUS_DOWN)
+        }
     }
 
     override fun onDestroyView() {

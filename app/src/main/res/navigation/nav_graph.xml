@@ -46,5 +46,9 @@
         android:id="@+id/analyticsFragment"
         android:name="com.suryashaktiapp.ui.AnalyticsFragment"
         android:label="Analytics" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.suryashaktiapp.ui.ProfileFragment"
+        android:label="Profile" />
 
 </navigation>

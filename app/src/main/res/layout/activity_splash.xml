@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/solar_black">
+    android:background="@drawable/splash_gradient">
 
     <!-- Lottie Sun Animation -->
     <com.airbnb.lottie.LottieAnimationView
@@ -21,9 +21,10 @@
         android:layout_height="wrap_content"
         android:text="Surya-Shakti"
         android:textColor="@color/solar_yellow"
-        android:textSize="36sp"
+        android:textSize="38sp"
         android:textStyle="bold"
-        android:paddingTop="16dp" />
+        android:paddingTop="16dp"
+        android:letterSpacing="0.1" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,11 +34,18 @@
         android:textSize="16sp"
         android:paddingTop="8dp" />
 
+    <View
+        android:layout_width="60dp"
+        android:layout_height="3dp"
+        android:background="@color/solar_yellow"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
     <com.google.android.material.progressindicator.CircularProgressIndicator
         android:id="@+id/progress_splash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:indeterminate="true"
         android:indeterminateTint="@color/solar_yellow" />
 
@@ -47,6 +55,6 @@
         android:text="Powering your solar journey..."
         android:textColor="@color/solar_grey"
         android:textSize="12sp"
-        android:paddingTop="16dp" />
+        android:paddingTop="12dp" />
 
 </LinearLayout>

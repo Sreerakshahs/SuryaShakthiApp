@@ -87,6 +87,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="16dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -173,6 +174,7 @@
                         android:text="🏆 25-Year Savings: ₹--"
                         android:textColor="@color/solar_yellow"
                         android:textSize="14sp" />
+
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -202,7 +204,7 @@
                     android:id="@+id/tv_efficiency_grade"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="A+"
+                    android:text="--"
                     android:textColor="@color/solar_green"
                     android:textSize="64sp"
                     android:textStyle="bold" />
@@ -210,7 +212,7 @@
                     android:id="@+id/tv_efficiency_desc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Excellent solar utilization!"
+                    android:text="Log energy data to get your rating!"
                     android:textColor="@color/solar_white"
                     android:textSize="13sp"
                     android:gravity="center"
@@ -218,7 +220,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Monthly Comparison -->
+        <!-- Generation vs Consumption Chart -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -257,6 +259,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="16dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -266,33 +269,40 @@
                     android:textStyle="bold"
                     android:paddingBottom="8dp" />
 
-                <!-- Chat Messages -->
-                <LinearLayout
-                    android:id="@+id/chat_container"
+                <!-- Chat Messages ScrollView -->
+                <ScrollView
+                    android:id="@+id/scroll_chat"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingBottom="8dp">
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="8dp">
 
-                    <!-- AI Message -->
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:id="@+id/chat_container"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="🤖 Hi! I'm your solar AI assistant. Ask me anything about your energy usage!"
-                        android:textColor="@color/solar_white"
-                        android:textSize="13sp"
-                        android:background="#2A1A4E"
-                        android:padding="10dp"
-                        android:layout_marginBottom="8dp"
-                        android:maxWidth="280dp" />
+                        android:orientation="vertical"
+                        android:padding="4dp">
 
-                </LinearLayout>
+                        <!-- Initial AI Message -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🤖 Hi! I am your solar AI assistant. Ask me about savings, battery, tips, CO2, ROI or generation!"
+                            android:textColor="@color/solar_white"
+                            android:textSize="13sp"
+                            android:background="#2A1A4E"
+                            android:padding="10dp"
+                            android:layout_marginBottom="8dp" />
 
-                <!-- Chat Input -->
+                    </LinearLayout>
+                </ScrollView>
+
+                <!-- Chat Input Row -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_chat_input"
@@ -303,7 +313,9 @@
                         android:textColor="@color/solar_white"
                         android:textColorHint="@color/solar_grey"
                         android:background="#2A1A4E"
-                        android:padding="10dp" />
+                        android:padding="12dp"
+                        android:imeOptions="actionSend"
+                        android:inputType="text" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btn_send_chat"
@@ -313,7 +325,70 @@
                         android:textColor="@color/solar_black"
                         app:backgroundTint="@color/solar_yellow"
                         android:layout_marginStart="8dp" />
+
                 </LinearLayout>
+
+                <!-- Quick Question Chips -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quick questions:"
+                    android:textColor="@color/solar_grey"
+                    android:textSize="11sp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="4dp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Save energy"
+                            android:textColor="@color/solar_black"
+                            android:layout_marginEnd="4dp" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_battery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Battery tips"
+                            android:textColor="@color/solar_black"
+                            android:layout_marginEnd="4dp" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_co2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CO2 savings"
+                            android:textColor="@color/solar_black"
+                            android:layout_marginEnd="4dp" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_roi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ROI"
+                            android:textColor="@color/solar_black"
+                            android:layout_marginEnd="4dp" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_panel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Panel care"
+                            android:textColor="@color/solar_black" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

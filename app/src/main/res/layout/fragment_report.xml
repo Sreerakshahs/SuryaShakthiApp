@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/solar_black"
+    android:background="@color/bg_main"
     android:padding="16dp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="📊 30-Day Report"
-        android:textColor="@color/solar_yellow"
+        android:textColor="@color/solar_yellow_dark"
         android:textSize="22sp"
         android:textStyle="bold"
         android:paddingBottom="16dp" />
@@ -28,8 +28,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginEnd="6dp"
-            app:cardBackgroundColor="@color/solar_card_bg"
-            app:cardCornerRadius="12dp">
+            app:cardBackgroundColor="@color/solar_white"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -58,8 +59,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginStart="6dp"
-            app:cardBackgroundColor="@color/solar_card_bg"
-            app:cardCornerRadius="12dp">
+            app:cardBackgroundColor="@color/solar_white"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -77,7 +79,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0/100"
-                    android:textColor="@color/solar_yellow"
+                    android:textColor="@color/solar_yellow_dark"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -85,11 +87,18 @@
     </LinearLayout>
 
     <!-- Bar Chart -->
-    <com.github.mikephil.charting.charts.BarChart
-        android:id="@+id/bar_chart"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:layout_marginBottom="16dp" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="@color/solar_white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/bar_chart"
+            android:layout_width="match_parent"
+            android:layout_height="220dp" />
+    </androidx.cardview.widget.CardView>
 
     <!-- Logs List -->
     <androidx.recyclerview.widget.RecyclerView

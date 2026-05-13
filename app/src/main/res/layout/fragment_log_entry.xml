@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/solar_black">
+    android:background="@color/bg_main">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="📋 Log Today's Energy"
-            android:textColor="@color/solar_yellow"
+            android:textColor="@color/solar_yellow_dark"
             android:textSize="22sp"
             android:textStyle="bold"
             android:paddingBottom="16dp" />
@@ -42,8 +42,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="☀️"
-                android:textColor="@color/solar_white"
-                android:buttonTint="@color/solar_yellow" />
+                android:textColor="@color/solar_black"
+                android:buttonTint="@color/solar_yellow_dark" />
 
             <RadioButton
                 android:id="@+id/rb_partly"
@@ -51,8 +51,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="⛅"
-                android:textColor="@color/solar_white"
-                android:buttonTint="@color/solar_yellow" />
+                android:textColor="@color/solar_black"
+                android:buttonTint="@color/solar_yellow_dark" />
 
             <RadioButton
                 android:id="@+id/rb_cloudy"
@@ -60,8 +60,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="☁️"
-                android:textColor="@color/solar_white"
-                android:buttonTint="@color/solar_yellow" />
+                android:textColor="@color/solar_black"
+                android:buttonTint="@color/solar_yellow_dark" />
 
             <RadioButton
                 android:id="@+id/rb_rainy"
@@ -69,8 +69,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="🌧️"
-                android:textColor="@color/solar_white"
-                android:buttonTint="@color/solar_yellow" />
+                android:textColor="@color/solar_black"
+                android:buttonTint="@color/solar_yellow_dark" />
         </RadioGroup>
 
         <!-- Simulate Button -->
@@ -99,15 +99,15 @@
             android:layout_height="wrap_content"
             android:hint="Solar Generated (kWh)"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:boxStrokeColor="@color/solar_yellow"
-            app:hintTextColor="@color/solar_yellow"
+            app:boxStrokeColor="@color/solar_yellow_dark"
+            app:hintTextColor="@color/solar_yellow_dark"
             android:layout_marginBottom="12dp">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_generated"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
-                android:textColor="@color/solar_white" />
+                android:textColor="@color/solar_black" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Consumption Input -->
@@ -124,7 +124,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
-                android:textColor="@color/solar_white" />
+                android:textColor="@color/solar_black" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Battery Level -->
@@ -142,8 +142,8 @@
             android:layout_height="wrap_content"
             android:max="100"
             android:progress="50"
-            android:progressTint="@color/solar_yellow"
-            android:thumbTint="@color/solar_yellow"
+            android:progressTint="@color/solar_yellow_dark"
+            android:thumbTint="@color/solar_yellow_dark"
             android:layout_marginBottom="4dp" />
 
         <TextView
@@ -151,7 +151,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="50%"
-            android:textColor="@color/solar_yellow"
+            android:textColor="@color/solar_yellow_dark"
             android:gravity="center"
             android:layout_marginBottom="12dp" />
 
@@ -170,7 +170,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
                 android:text="8.0"
-                android:textColor="@color/solar_white" />
+                android:textColor="@color/solar_black" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Save Button -->
