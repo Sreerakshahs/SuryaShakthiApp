@@ -1,13 +1,13 @@
 <resources>
     <style name="Theme.SuryaShaktiApp"
         parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">@color/solar_yellow</item>
-        <item name="colorPrimaryVariant">@color/solar_yellow_dark</item>
-        <item name="colorOnPrimary">@color/solar_black</item>
-        <item name="colorSurface">@color/solar_white</item>
-        <item name="colorOnSurface">@color/solar_black</item>
+        <item name="colorPrimary">#00838F</item>
+        <item name="colorPrimaryVariant">#006064</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorOnSurface">#212121</item>
         <item name="android:windowBackground">@color/bg_main</item>
-        <item name="android:statusBarColor">@color/solar_yellow</item>
-        <item name="android:navigationBarColor">@color/solar_white</item>
+        <item name="android:statusBarColor">@color/teal_dark</item>
+        <item name="android:navigationBarColor">@color/bg_main</item>
     </style>
 </resources>

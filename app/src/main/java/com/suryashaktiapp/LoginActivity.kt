@@ -31,16 +31,20 @@ class LoginActivity : AppCompatActivity() {
             val password = binding.etLoginPin.text.toString().trim()
 
             if (name.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this,
+                Toast.makeText(
+                    this,
                     "Please enter name and password",
-                    Toast.LENGTH_SHORT).show()
+                    Toast.LENGTH_SHORT
+                ).show()
                 return@setOnClickListener
             }
 
             if (password.length < 6) {
-                Toast.makeText(this,
+                Toast.makeText(
+                    this,
                     "Password must be at least 6 characters",
-                    Toast.LENGTH_SHORT).show()
+                    Toast.LENGTH_SHORT
+                ).show()
                 return@setOnClickListener
             }
 
@@ -49,23 +53,33 @@ class LoginActivity : AppCompatActivity() {
 
             // Show loading
             binding.btnLogin.isEnabled = false
-            binding.btnLogin.text = "Logging in..."
+            binding.btnLogin.text = "Signing in..."
 
             auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     binding.btnLogin.isEnabled = true
-                    binding.btnLogin.text = "🔓 LOGIN"
+                    binding.btnLogin.text = "SIGN IN"
 
                     if (task.isSuccessful) {
-                        Toast.makeText(this,
+                        // Save name locally
+                        getSharedPreferences("surya_settings", MODE_PRIVATE)
+                            .edit()
+                            .putString("username", name)
+                            .apply()
+
+                        Toast.makeText(
+                            this,
                             "Welcome back $name! ☀️",
-                            Toast.LENGTH_SHORT).show()
+                            Toast.LENGTH_SHORT
+                        ).show()
                         startActivity(Intent(this, MainActivity::class.java))
                         finish()
                     } else {
-                        Toast.makeText(this,
+                        Toast.makeText(
+                            this,
                             "❌ Invalid name or password!",
-                            Toast.LENGTH_LONG).show()
+                            Toast.LENGTH_LONG
+                        ).show()
                     }
                 }
         }

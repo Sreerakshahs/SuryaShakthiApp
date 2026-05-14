@@ -11,6 +11,7 @@
         android:orientation="vertical"
         android:padding="24dp">
 
+        <!-- Header -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,6 +36,7 @@
             android:layout_marginBottom="16dp"
             app:cardBackgroundColor="@color/solar_card_bg"
             app:cardCornerRadius="16dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -50,38 +52,51 @@
                     android:textStyle="bold"
                     android:paddingBottom="12dp" />
 
+                <!-- Name -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Full Name"
+                    android:layout_marginBottom="12dp"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxBackgroundColor="@color/solar_white"
                     app:boxStrokeColor="@color/solar_yellow"
-                    app:hintTextColor="@color/solar_yellow"
-                    android:layout_marginBottom="12dp">
+                    app:hintTextColor="@color/solar_yellow">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_setup_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/solar_white"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_secondary"
+                        android:textCursorDrawable="@null"
                         android:inputType="textPersonName" />
+
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <!-- Location -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="City / Village"
+                    android:layout_marginBottom="12dp"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxBackgroundColor="@color/solar_white"
                     app:boxStrokeColor="@color/solar_yellow"
-                    app:hintTextColor="@color/solar_yellow"
-                    android:layout_marginBottom="12dp">
+                    app:hintTextColor="@color/solar_yellow">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_setup_location"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/solar_white" />
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_secondary"
+                        android:textCursorDrawable="@null" />
+
                 </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
         <!-- Solar Setup Card -->
@@ -91,6 +106,7 @@
             android:layout_marginBottom="16dp"
             app:cardBackgroundColor="@color/solar_card_bg"
             app:cardCornerRadius="16dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -106,58 +122,77 @@
                     android:textStyle="bold"
                     android:paddingBottom="12dp" />
 
+                <!-- Capacity -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Panel Capacity (kW)"
+                    android:layout_marginBottom="12dp"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxBackgroundColor="@color/solar_white"
                     app:boxStrokeColor="@color/solar_yellow"
-                    app:hintTextColor="@color/solar_yellow"
-                    android:layout_marginBottom="12dp">
+                    app:hintTextColor="@color/solar_yellow">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_setup_capacity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/solar_white"
-                        android:inputType="numberDecimal"
-                        android:text="2.0" />
+                        android:text="2.0"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_secondary"
+                        android:textCursorDrawable="@null"
+                        android:inputType="numberDecimal" />
+
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <!-- Rate -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Electricity Rate (₹/kWh)"
+                    android:layout_marginBottom="12dp"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxBackgroundColor="@color/solar_white"
                     app:boxStrokeColor="@color/solar_green"
-                    app:hintTextColor="@color/solar_green"
-                    android:layout_marginBottom="12dp">
+                    app:hintTextColor="@color/solar_green">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_setup_rate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/solar_white"
-                        android:inputType="numberDecimal"
-                        android:text="8.0" />
+                        android:text="8.0"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_secondary"
+                        android:textCursorDrawable="@null"
+                        android:inputType="numberDecimal" />
+
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <!-- Fix PIN field in activity_profile_setup.xml -->
+                <!-- Password -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Create Password (min 6 characters)"
+                    android:layout_marginBottom="12dp"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxBackgroundColor="@color/solar_white"
                     app:boxStrokeColor="@color/solar_orange"
                     app:hintTextColor="@color/solar_orange"
-                    app:endIconMode="password_toggle"
-                    android:layout_marginBottom="12dp">
+                    app:endIconMode="password_toggle">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_setup_pin"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/solar_white"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_secondary"
+                        android:textCursorDrawable="@null"
                         android:inputType="textPassword" />
+
                 </com.google.android.material.textfield.TextInputLayout>
+
             </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
         <!-- Start Button -->
@@ -173,4 +208,5 @@
             app:cornerRadius="12dp" />
 
     </LinearLayout>
+
 </ScrollView>

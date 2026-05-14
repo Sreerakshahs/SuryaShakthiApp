@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="solar_yellow">#FFD600</color>
-    <color name="solar_yellow_dark">#F9A825</color>
+    <color name="solar_yellow">#00838F</color>
+    <color name="solar_yellow_dark">#006064</color>
     <color name="solar_black">#212121</color>
-    <color name="solar_dark_surface">#FFFDE7</color>
+    <color name="solar_dark_surface">#F0F4F8</color>
     <color name="solar_card_bg">#FFFFFF</color>
-    <color name="solar_green">#00C853</color>
-    <color name="solar_red">#FF1744</color>
+    <color name="solar_green">#00897B</color>
+    <color name="solar_red">#D32F2F</color>
     <color name="solar_white">#FFFFFF</color>
-    <color name="solar_grey">#757575</color>
+    <color name="solar_grey">#78909C</color>
     <color name="solar_orange">#FF6D00</color>
-    <color name="bg_main">#FFFDE7</color>
+    <color name="teal_dark">#006064</color>
+    <color name="teal_primary">#00838F</color>
+    <color name="teal_light">#00ACC1</color>
+    <color name="bg_main">#F0F4F8</color>
     <color name="bg_card">#FFFFFF</color>
-    <color name="bg_card_dark">#FFF9C4</color>
     <color name="text_primary">#212121</color>
-    <color name="text_secondary">#757575</color>
-    <color name="text_hint">#BDBDBD</color>
-    <color name="status_excellent">#00C853</color>
-    <color name="status_good">#FFD600</color>
+    <color name="text_secondary">#546E7A</color>
+    <color name="text_hint">#B0BEC5</color>
+    <color name="status_excellent">#00897B</color>
+    <color name="status_good">#00ACC1</color>
     <color name="status_warning">#FF6D00</color>
-    <color name="status_danger">#FF1744</color>
+    <color name="status_danger">#D32F2F</color>
 </resources>

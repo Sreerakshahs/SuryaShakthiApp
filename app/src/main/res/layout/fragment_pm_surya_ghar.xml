@@ -83,35 +83,35 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="✅  Up to 300 units FREE electricity per month"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp"
                     android:paddingBottom="8dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="✅  Central subsidy up to ₹78,000"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp"
                     android:paddingBottom="8dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="✅  Additional state government subsidies"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp"
                     android:paddingBottom="8dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="✅  Earn by selling extra power to grid"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp"
                     android:paddingBottom="8dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="✅  25 years of solar panel lifespan"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -140,28 +140,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="1 kW System → ₹30,000 subsidy"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp"
                     android:paddingBottom="8dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="2 kW System → ₹60,000 subsidy"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp"
                     android:paddingBottom="8dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="3 kW System → ₹78,000 subsidy"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp"
                     android:paddingBottom="8dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Above 3 kW → ₹78,000 subsidy (max)"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -190,28 +190,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="• Must be an Indian citizen"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp"
                     android:paddingBottom="6dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="• Must own a house with valid electricity connection"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp"
                     android:paddingBottom="6dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="• Must have a valid bank account with IFSC"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp"
                     android:paddingBottom="6dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="• Should not have previously availed solar subsidy"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -240,42 +240,42 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Step 1: Visit pmsuryaghar.gov.in"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp"
                     android:paddingBottom="6dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Step 2: Register with your electricity bill number"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp"
                     android:paddingBottom="6dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Step 3: Apply for rooftop solar"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp"
                     android:paddingBottom="6dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Step 4: Get feasibility approval from DISCOM"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp"
                     android:paddingBottom="6dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Step 5: Install panels via registered vendor"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp"
                     android:paddingBottom="6dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Step 6: Submit installation details + bank info"
-                    android:textColor="@color/solar_white"
+                    android:textColor="@color/solar_black"
                     android:textSize="13sp"
                     android:paddingBottom="6dp" />
                 <TextView

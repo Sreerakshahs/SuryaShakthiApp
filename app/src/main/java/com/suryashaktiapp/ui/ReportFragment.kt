@@ -81,13 +81,22 @@ class ReportFragment : Fragment() {
             BarEntry(index.toFloat(), log.netSavingsRupees)
         }
         val labels = logs.reversed().map { it.date.takeLast(5) }
-        val dataSet = BarDataSet(entries, "Savings").apply {
-            color = Color.parseColor("#FFD600")
-            valueTextColor = Color.parseColor("#FFFFFF")
-            valueTextSize = 8f
-        }
-        binding.barChart.xAxis.valueFormatter = IndexAxisValueFormatter(labels)
-        binding.barChart.data = BarData(dataSet)
+        val dataSet = BarDataSet(entries, "Daily Savings ₹")
+        dataSet.color = android.graphics.Color.parseColor("#00838F")
+        dataSet.valueTextColor = android.graphics.Color.parseColor("#212121")
+        dataSet.valueTextSize = 8f
+
+        binding.barChart.xAxis.valueFormatter =
+            com.github.mikephil.charting.formatter.IndexAxisValueFormatter(labels)
+        binding.barChart.xAxis.textColor =
+            android.graphics.Color.parseColor("#212121")
+        binding.barChart.axisLeft.textColor =
+            android.graphics.Color.parseColor("#212121")
+        binding.barChart.setBackgroundColor(
+            android.graphics.Color.parseColor("#FFFFFF")
+        )
+        binding.barChart.data =
+            com.github.mikephil.charting.data.BarData(dataSet)
         binding.barChart.invalidate()
     }
 
@@ -116,7 +125,7 @@ class LogAdapter(private val logs: List<EnergyLog>) :
         val log = logs[position]
         holder.text.apply {
             text = "${log.date}  |  ${log.weatherCondition}  |  Score: ${log.independenceScore}"
-            setTextColor(Color.parseColor("#FFD600"))
+            setTextColor(Color.parseColor("#42A5F5"))
         }
         holder.text2.apply {
             text = "Gen: %.1f  Con: %.1f  Saved: ₹%.2f  Export: %.1f kWh"
@@ -126,7 +135,7 @@ class LogAdapter(private val logs: List<EnergyLog>) :
                     log.netSavingsRupees,
                     log.exportedKwh
                 )
-            setTextColor(Color.parseColor("#9E9E9E"))
+            setTextColor(Color.parseColor("#66BB6A"))
         }
     }
 

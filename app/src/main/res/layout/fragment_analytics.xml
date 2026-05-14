@@ -111,7 +111,9 @@
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
                         android:text="150000"
-                        android:textColor="@color/solar_white" />
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/darker_gray"/>
+
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -128,7 +130,8 @@
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
                         android:text="1200"
-                        android:textColor="@color/solar_white" />
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/darker_gray"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.button.MaterialButton
@@ -310,8 +313,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:hint="Ask AI assistant..."
-                        android:textColor="@color/solar_white"
-                        android:textColorHint="@color/solar_grey"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textCursorDrawable="@null"
                         android:background="#2A1A4E"
                         android:padding="12dp"
                         android:imeOptions="actionSend"
