@@ -95,10 +95,10 @@ app/
 
 ## 📸 Screenshots
 ### Dashboard Screen
-![Dashboard](screenshots/dashboard.jpeg)
+![Dashboard](screenshots/Dashboard.jpeg)
 
 ### Firebase Integration
-![Firebase](screenshots/firebase.png)
+![Firebase](screenshots/Firebase.png)
 
 ### Log Entry Screen
 ![LogEntry](screenshots/logentry.jpeg)
