@@ -94,15 +94,14 @@ app/
 ---
 
 ## 📸 Screenshots
-
 ### Dashboard Screen
-(Add screenshot here)
+![Dashboard](screenshots/dashboard.jpeg)
 
-### Energy Monitoring Screen
-(Add screenshot here)
+### Firebase Integration
+![Firebase](screenshots/firebase.png)
 
-### Firebase Live Data Screen
-(Add screenshot here)
+### Log Entry Screen
+![LogEntry](screenshots/logentry.jpeg)
 
 ---
 
