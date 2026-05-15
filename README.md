@@ -1,45 +1,159 @@
-# SuryaShakti Solar Monitor
+# ☀️ SuryaShakti Solar Monitor
 
-## Overview
+An Android application for monitoring solar energy production and usage in real time using Firebase integration and live dashboard analytics.
 
-SuryaShakti is an Android application developed to monitor solar energy usage and production in real time. The app helps users track energy statistics using a simple and user-friendly interface.
+---
 
-## Features
+## 📌 Overview
 
-* Real-time solar monitoring
-* Firebase backend integration
-* Energy usage tracking
-* User-friendly dashboard
-* Live data updates
+SuryaShakti is a smart Android application developed to help users monitor solar energy generation and consumption efficiently. The app provides real-time updates, energy statistics, and a simple dashboard for better energy management.
 
-## Technologies Used
+The project aims to promote renewable energy awareness and efficient power usage through a mobile-based monitoring system.
 
-* Kotlin
-* Android Studio
-* Firebase Realtime Database
-* XML UI Design
+---
 
-## Project Structure
+## ✨ Features
 
-* app/ → Main Android application
-* screenshots/ → App screenshots
-* apk/ → APK file
-* report/ → Project report and documentation
+- 🔋 Real-time solar monitoring
+- 📊 Energy usage tracking
+- ☁️ Firebase Realtime Database integration
+- 📈 Live data updates
+- 📱 User-friendly dashboard
+- ⚡ Fast and responsive UI
+- 🔄 Real-time synchronization
 
-## How to Run
+---
 
-1. Clone the repository
-2. Open the project in Android Studio
-3. Sync Gradle files
-4. Add Firebase configuration (`google-services.json`)
-5. Run the app on emulator or Android device
+## 🛠️ Technologies Used
 
-## Future Enhancements
+### Frontend
+- Kotlin
+- XML UI Design
 
-* AI-based energy prediction
-* Notification alerts
-* Monthly analytics reports
+### Backend / Database
+- Firebase Realtime Database
 
-## Author
+### Development Tools
+- Android Studio
+- Gradle
 
-Developed by Sree Raksha
+---
+
+## 📂 Project Structure
+
+```text
+SuryaShakti/
+│
+├── app/                # Main Android application
+├── screenshots/        # Application screenshots
+├── apk/                # APK build file
+├── report/             # Project report and documentation
+├── README.md
+└── build.gradle
+```
+
+---
+
+## 🚀 Installation & Setup
+
+### Step 1 — Clone Repository
+
+```bash
+git clone https://github.com/Sreerakshahs/SuryaShakthiApp.git
+```
+
+### Step 2 — Open in Android Studio
+
+- Open Android Studio
+- Click **Open Project**
+- Select the cloned folder
+
+### Step 3 — Sync Dependencies
+
+- Allow Gradle to sync automatically
+
+### Step 4 — Configure Firebase
+
+Add your Firebase configuration file:
+
+```text
+google-services.json
+```
+
+Place it inside:
+
+```text
+app/
+```
+
+### Step 5 — Run Application
+
+- Connect Android device or start emulator
+- Click **Run ▶️**
+
+---
+
+## 📸 Screenshots
+
+### Dashboard Screen
+(Add screenshot here)
+
+### Energy Monitoring Screen
+(Add screenshot here)
+
+### Firebase Live Data Screen
+(Add screenshot here)
+
+---
+
+## 📱 APK File
+
+APK file is available inside:
+
+```text
+apk/
+```
+
+---
+
+## 🔮 Future Enhancements
+
+- 🤖 AI-based energy prediction
+- 🔔 Notification alerts
+- 📅 Monthly analytics reports
+- 🌐 Cloud dashboard support
+- 📊 Advanced visualization charts
+
+---
+
+## 🧪 Testing
+
+Tested on:
+- Android Emulator
+- Android 11+
+- Firebase Realtime Database
+
+---
+
+## 📄 Project Report
+
+Documentation and reports are available in:
+
+```text
+report/
+```
+
+---
+
+## 👨‍💻 Author
+
+Developed by **Sree Raksha**
+
+GitHub:
+https://github.com/Sreerakshahs
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
